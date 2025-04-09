@@ -54,11 +54,13 @@ OBJECTS_DIR   = ./
 
 SOURCES       = connector.cpp \
 		main.cpp \
-		mainwindow.cpp moc_connector.cpp \
+		mainwindow.cpp \
+		parser.cpp moc_connector.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = connector.o \
 		main.o \
 		mainwindow.o \
+		parser.o \
 		moc_connector.o \
 		moc_mainwindow.o
 DIST          = /usr/lib/qt6/mkspecs/features/spec_pre.prf \
@@ -364,9 +366,11 @@ DIST          = /usr/lib/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt6/mkspecs/features/yacc.prf \
 		/usr/lib/qt6/mkspecs/features/lex.prf \
 		chat-client.pro connector.h \
-		mainwindow.h connector.cpp \
+		mainwindow.h \
+		parser.h connector.cpp \
 		main.cpp \
-		mainwindow.cpp
+		mainwindow.cpp \
+		parser.cpp
 QMAKE_TARGET  = chat-client
 DESTDIR       = 
 TARGET        = chat-client
@@ -1010,8 +1014,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/qt6/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents connector.h mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents connector.cpp main.cpp mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents connector.h mainwindow.h parser.h $(DISTDIR)/
+	$(COPY_FILE) --parents connector.cpp main.cpp mainwindow.cpp parser.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -1054,6 +1058,7 @@ moc_connector.cpp: connector.h \
 
 moc_mainwindow.cpp: mainwindow.h \
 		connector.h \
+		parser.h \
 		moc_predefs.h \
 		/usr/lib/qt6/moc
 	/usr/lib/qt6/moc $(DEFINES) --include /home/lenovo/Projects/websockets/chat-client/moc_predefs.h -I/usr/lib/qt6/mkspecs/linux-g++ -I/home/lenovo/Projects/websockets/chat-client -I/usr/include/qt6 -I/usr/include/qt6/QtWidgets -I/usr/include/qt6/QtGui -I/usr/include/qt6/QtWebSockets -I/usr/include/qt6/QtNetwork -I/usr/include/qt6/QtCore -I/usr/include/c++/14.2.1 -I/usr/include/c++/14.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/14.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include-fixed -I/usr/include mainwindow.h -o moc_mainwindow.cpp
@@ -1079,17 +1084,23 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 ####### Compile
 
-connector.o: connector.cpp connector.h
+connector.o: connector.cpp connector.h \
+		parser.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o connector.o connector.cpp
 
 main.o: main.cpp mainwindow.h \
-		connector.h
+		connector.h \
+		parser.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
 		connector.h \
+		parser.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
+
+parser.o: parser.cpp parser.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o parser.o parser.cpp
 
 moc_connector.o: moc_connector.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_connector.o moc_connector.cpp

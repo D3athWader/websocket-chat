@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = chat-client1.0.0
-DISTDIR = /home/lenovo/Projects/websockets/chat-client/.tmp/chat-client1.0.0
+DISTDIR = /home/lenovo/Projects/websockets/websocket-chat/.tmp/chat-client1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/usr/lib -Wl,-rpath-link,/usr/lib
 LIBS          = $(SUBLIBS) /usr/lib/libQt6Widgets.so /usr/lib/libQt6Gui.so /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6WebSockets.so /usr/lib/libQt6Network.so /usr/lib/libQt6Core.so -lpthread -lGLX -lOpenGL   
@@ -76,6 +76,32 @@ DIST          = /usr/lib/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt6/mkspecs/modules/qt_KDSoapServer.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_KF6UserFeedbackCore.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_KF6UserFeedbackWidgets.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3danimation.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3danimation_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dcore.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dcore_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dextras.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dextras_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dinput.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dinput_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dlogic.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dlogic_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquick.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquick_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickanimation.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickextras.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickextras_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickinput.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickinput_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickrender.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickrender_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene2d.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene3d.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene3d_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3drender.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3drender_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_bluetooth.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_charts.pri \
@@ -106,6 +132,8 @@ DIST          = /usr/lib/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_gui_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_help_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_httpserver.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_httpserver_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_hunspellinputmethod.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_hunspellinputmethod_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
@@ -395,6 +423,32 @@ Makefile: chat-client.pro /usr/lib/qt6/mkspecs/linux-g++/qmake.conf /usr/lib/qt6
 		/usr/lib/qt6/mkspecs/modules/qt_KDSoapServer.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_KF6UserFeedbackCore.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_KF6UserFeedbackWidgets.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3danimation.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3danimation_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dcore.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dcore_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dextras.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dextras_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dinput.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dinput_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dlogic.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dlogic_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquick.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquick_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickanimation.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickextras.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickextras_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickinput.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickinput_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickrender.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickrender_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene2d.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene3d.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene3d_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3drender.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_3drender_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_bluetooth.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_charts.pri \
@@ -425,6 +479,8 @@ Makefile: chat-client.pro /usr/lib/qt6/mkspecs/linux-g++/qmake.conf /usr/lib/qt6
 		/usr/lib/qt6/mkspecs/modules/qt_lib_gui_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_help_private.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_httpserver.pri \
+		/usr/lib/qt6/mkspecs/modules/qt_lib_httpserver_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_hunspellinputmethod.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_hunspellinputmethod_private.pri \
 		/usr/lib/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
@@ -704,6 +760,32 @@ Makefile: chat-client.pro /usr/lib/qt6/mkspecs/linux-g++/qmake.conf /usr/lib/qt6
 /usr/lib/qt6/mkspecs/modules/qt_KDSoapServer.pri:
 /usr/lib/qt6/mkspecs/modules/qt_KF6UserFeedbackCore.pri:
 /usr/lib/qt6/mkspecs/modules/qt_KF6UserFeedbackWidgets.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3danimation.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3danimation_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dcore.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dcore_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dextras.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dextras_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dinput.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dinput_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dlogic.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dlogic_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquick.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquick_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickanimation.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickanimation_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickextras.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickextras_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickinput.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickinput_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickrender.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickrender_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene2d.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene2d_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene3d.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3dquickscene3d_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3drender.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_3drender_private.pri:
 /usr/lib/qt6/mkspecs/modules/qt_lib_bluetooth.pri:
 /usr/lib/qt6/mkspecs/modules/qt_lib_bluetooth_private.pri:
 /usr/lib/qt6/mkspecs/modules/qt_lib_charts.pri:
@@ -734,6 +816,8 @@ Makefile: chat-client.pro /usr/lib/qt6/mkspecs/linux-g++/qmake.conf /usr/lib/qt6
 /usr/lib/qt6/mkspecs/modules/qt_lib_gui_private.pri:
 /usr/lib/qt6/mkspecs/modules/qt_lib_help.pri:
 /usr/lib/qt6/mkspecs/modules/qt_lib_help_private.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_httpserver.pri:
+/usr/lib/qt6/mkspecs/modules/qt_lib_httpserver_private.pri:
 /usr/lib/qt6/mkspecs/modules/qt_lib_hunspellinputmethod.pri:
 /usr/lib/qt6/mkspecs/modules/qt_lib_hunspellinputmethod_private.pri:
 /usr/lib/qt6/mkspecs/modules/qt_lib_input_support_private.pri:
@@ -1054,14 +1138,14 @@ compiler_moc_header_clean:
 moc_connector.cpp: connector.h \
 		moc_predefs.h \
 		/usr/lib/qt6/moc
-	/usr/lib/qt6/moc $(DEFINES) --include /home/lenovo/Projects/websockets/chat-client/moc_predefs.h -I/usr/lib/qt6/mkspecs/linux-g++ -I/home/lenovo/Projects/websockets/chat-client -I/usr/include/qt6 -I/usr/include/qt6/QtWidgets -I/usr/include/qt6/QtGui -I/usr/include/qt6/QtWebSockets -I/usr/include/qt6/QtNetwork -I/usr/include/qt6/QtCore -I/usr/include/c++/14.2.1 -I/usr/include/c++/14.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/14.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include-fixed -I/usr/include connector.h -o moc_connector.cpp
+	/usr/lib/qt6/moc $(DEFINES) --include /home/lenovo/Projects/websockets/websocket-chat/moc_predefs.h -I/usr/lib/qt6/mkspecs/linux-g++ -I/home/lenovo/Projects/websockets/websocket-chat -I/usr/include/qt6 -I/usr/include/qt6/QtWidgets -I/usr/include/qt6/QtGui -I/usr/include/qt6/QtWebSockets -I/usr/include/qt6/QtNetwork -I/usr/include/qt6/QtCore -I/usr/include/c++/14.2.1 -I/usr/include/c++/14.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/14.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include-fixed -I/usr/include connector.h -o moc_connector.cpp
 
 moc_mainwindow.cpp: mainwindow.h \
 		connector.h \
 		parser.h \
 		moc_predefs.h \
 		/usr/lib/qt6/moc
-	/usr/lib/qt6/moc $(DEFINES) --include /home/lenovo/Projects/websockets/chat-client/moc_predefs.h -I/usr/lib/qt6/mkspecs/linux-g++ -I/home/lenovo/Projects/websockets/chat-client -I/usr/include/qt6 -I/usr/include/qt6/QtWidgets -I/usr/include/qt6/QtGui -I/usr/include/qt6/QtWebSockets -I/usr/include/qt6/QtNetwork -I/usr/include/qt6/QtCore -I/usr/include/c++/14.2.1 -I/usr/include/c++/14.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/14.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include-fixed -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/usr/lib/qt6/moc $(DEFINES) --include /home/lenovo/Projects/websockets/websocket-chat/moc_predefs.h -I/usr/lib/qt6/mkspecs/linux-g++ -I/home/lenovo/Projects/websockets/websocket-chat -I/usr/include/qt6 -I/usr/include/qt6/QtWidgets -I/usr/include/qt6/QtGui -I/usr/include/qt6/QtWebSockets -I/usr/include/qt6/QtNetwork -I/usr/include/qt6/QtCore -I/usr/include/c++/14.2.1 -I/usr/include/c++/14.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/14.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include-fixed -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
